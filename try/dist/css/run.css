@@ -1,0 +1,80 @@
+body,html{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+i{
+	cursor: pointer;
+}
+a{
+	color: black;
+}
+a:hover{
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+#head{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	background: #C01542;
+	width: 100%;
+	color: white;
+	font-size: 20px;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+#head .root{
+	width: 90%;
+	margin: 0px auto;
+}
+#head .root a{
+	color: white;
+	margin-left: 10px;
+}
+.add{
+	width: 100%;
+	height: auto;
+}
+.body{
+	width: 90%;
+	height: 70px;
+	margin: 0px auto;
+	line-height: 70px;
+	border-bottom: solid 1px lightgrey;
+}
+.body a:first-child{
+	float: left;
+	font-size: 18px;
+}
+.body a:last-child{
+	float: right;
+	font-size: 22px;
+}
+.next{
+	border-bottom: 0px;
+	text-align: right;
+}
+.next i{
+	display: inline-block;
+	margin-right: 15px;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 3px;
+}
+.next i:hover{
+	background-color: lightgreen;
+}
+.next i:active{
+	background-color: green;
+}
+.icon-spin{
+	font-size: 70px;
+	margin-left: 45%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}

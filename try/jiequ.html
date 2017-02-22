@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body,html{
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				width: 100%;
+			}
+			.hei{
+				height: 20%;
+				width: 20%;
+			}
+			.i{
+				float: left;
+				color: black;
+				overflow: hidden;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="hei">
+			<div class="i" id="i">你好你好你好你好你好你好你好你好你好你好</div>
+		</div>
+		
+		
+		<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">//智能截取相应宽度字符串demo
+			var a = $('#i').width();//字段容器宽度
+			var b = $('.hei').width();//根容器宽度
+			var aa = $('#i').height();//字段容器高度
+			var dd = $("#i").text();//字段总量
+		function abc(){
+			var c = "";
+			if(a > b){
+				$('#i').width(b);
+			}//若文字宽度溢出，修改宽度，多余则隐藏
+			if(aa > 25){
+				$('#i').height(24);
+			}//若文字高度溢出，修改宽度，多余则隐藏
+			var d = document.getElementById('i');
+			if(d.offsetWidth/20 < dd.length){//截取字段，并在字段后加省略号
+				for(let i = 0;i<d.offsetWidth/20 - 3;i++){
+					c = c + dd[i];
+				}
+				c = c + "...";
+				$("#i").text(c);
+			}
+		}
+		abc()
+		$(window).resize(function(){//窗口变换大小，截取字段长度相应改变
+			var b = $('.hei').width();
+			$('#i').width(b);
+			var d = document.getElementById('i');
+			abc()
+		})
+		</script>
+		
+	</body>
+</html>

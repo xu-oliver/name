@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,html{
+				height: 100%;
+				width: 100%;
+				/*background: red;*/
+				margin: 0px 0px 0px 0px;
+				padding: 0px 0px 0px 0px;
+			}
+			#head,#body,#last{
+				height: 50px;
+				min-height: 1px;
+				width: 30%;
+				border-radius: 15px;
+				border: solid 1px #DFDFDF;
+				display: inline-block;
+				position: relative;
+			}
+			#head .text{
+				width: 70%;
+				height: 30px;
+				position: absolute;
+				right: 5px;
+				margin-top: 8px;
+			}
+			#head .text>textarea{
+				width: 100%;
+				height: 100%;
+				border: 0px;
+				resize: none;
+				line-height: 30px;
+				overflow: hidden;
+				outline: none;
+			}
+			#head .middle{
+				width: 20%;
+				height: 30px;
+				position: absolute;
+				line-height: 30px;
+				margin-top: 8px;
+				margin-left: 3%;
+				padding-right: 1%;
+				/*background: red;*/
+				border-right: solid 1px #DFDFDF;
+			}
+			#head .middle,#head .text{
+				display: inline-block;
+			}
+			#head #focus-block{
+				width: 100%;
+				height: auto;
+				background: grey;
+				position: absolute;
+				top: 45px;
+				border-radius: 5px;
+				word-break: break-all;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="head">
+			<div class="middle">
+				nihao
+			</div><div class="text">
+				<textarea id="text-onfocus" name="" rows="" cols="" placeholder="请输asdasd入........"></textarea>
+			</div>
+			
+			<div id="focus-block">
+				
+			</div>
+		</div>
+		<div id="body">
+			
+		</div>
+		<div id="last">
+			
+		</div>
+		<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#text-onfocus")
+			.bind("focus",function(){
+				$("#focus-block").fadeIn('slow');
+			})
+			.bind("focusout",function(){
+				$("#focus-block").css("display","none");
+			})
+		</script>
+	</body>
+</html>
